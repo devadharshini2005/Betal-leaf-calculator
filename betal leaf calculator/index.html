@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betel Leaf Rate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Betel Leaf Rate Calculator</h2>
+
+        <!-- Select Unit Type -->
+        <label for="unitType">Select Unit Type (Kavuli/Mutti):</label>
+        <select id="unitType" required>
+            <option value="kavuli">Kavuli</option>
+            <option value="mutti">Mutti</option>
+        </select>
+
+        <!-- Enter Quantity -->
+        <label for="quantity">Enter quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter number of units" required>
+
+        <!-- Enter Rate for 1 Semmai (100 Kavuli or 4 Mutti) -->
+        <label for="rate">Enter rate per Semmai (100 Kavuli or 4 Mutti):</label>
+        <input type="number" id="rate" step="0.01" placeholder="Rate per Semmai" required>
+
+        <!-- Calculate Button -->
+        <button onclick="calculateTotal()">Calculate Total</button>
+
+        <!-- Display Result -->
+        <div id="result" class="result">
+            <h3>Total Price: <span id="totalPrice"></span></h3>
+            <h4>Rate per Leaf: <span id="ratePerLeaf"></span></h4>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="scripts.js"></script>
+</body>
+</html>
